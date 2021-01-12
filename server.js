@@ -2,6 +2,7 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 
 const server = express ()
+const posts = require("./data") //Pegando as infos dentro de data.js
 
 server.use(express.static('public'))
 
@@ -16,7 +17,7 @@ server.get("/", function(req, res){
 })
 
 server.get("/courses", function(req, res){
-    return res.render("courses")
+    return res.render("courses", { items: posts }) //enviando items para ser usado no courses
 })
 
 server.use(function(req, res) {

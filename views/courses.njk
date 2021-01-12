@@ -12,51 +12,22 @@
     </div>
 
     <section class="cards">
-        <div class="card" id="dark-mode-com-css-mudando-a-aparencia-do-blog-de-maneira-simples-e-rapida">
-            <div class="CardImgContainer">
-                <img src="https://blog.rocketseat.com.br/content/images/2020/10/dark-mode-com-css-mudando-a-aparencia-do-blog-de-maneira-simples-e-rapida.jpg" alt="Dark Mode com CSS">
-            </div>
-            
-            <div class="cardContainer">
-                <p>Dark Mode com CSS</p>
-            </div>
+        {% for item in items %}
+            <div class="card" id="{{ item.id }}">
+                <div class="CardImgContainer">
+                    <img src="{{ item.img_url }}" alt="Imagem de {{ item.title }}">
+                </div>
+                
+                <div class="cardContainer">
+                    <p>{{ item.title }}</p>
+                </div>
 
-            <div class="cardInfo">
-                <p>Tiago Marinho</p>
-                <p class="tempoLeitura">3:00 min</p>
+                <div class="cardInfo">
+                    <p>{{ item.author }}</p>
+                    <p class="tempoLeitura">{{ item.timeToRead }}</p>
+                </div>
             </div>
-        </div>
-
-        <div class="card" id="introducao-a-testing-library-testando-componentes-react">
-            <div class="CardImgContainer">
-                <img src="https://blog.rocketseat.com.br/content/images/2020/08/introducao-a-testing-library-testando-componentes-react.png" alt="Introdução à Testing Library">
-            </div>
-            
-            <div class="cardContainer">
-                <p>Introdução à Testing Library</p>
-            </div>
-
-            <div class="cardInfo">
-                <p>Tiago Marinho</p>
-                <p class="tempoLeitura">9:00 min</p>
-            </div>
-        </div>
-
-        <div class="card" id="introducao-ao-docker-criando-um-servidor-web-com-node-js-e-subindo-para-o-container">
-            <div class="CardImgContainer">
-                <img src="https://blog.rocketseat.com.br/content/images/2020/08/introducao-ao-docker.png" alt="Introdução ao Docker">
-            </div>
-            
-            <div class="cardContainer">
-                <p>Introdução ao Docker</p>
-            </div>
-
-            <div class="cardInfo">
-                <p>Tiago Marinho</p>
-                <p class="tempoLeitura">9:00 min</p>
-            </div>
-        </div>
-
+        {% endfor %}
     </section>
 
     <div class="ModalOverlay">

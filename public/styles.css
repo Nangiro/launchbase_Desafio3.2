@@ -29,6 +29,11 @@ header div a {
     margin: 0 30px;
     text-decoration: none;
 }
+header div a:hover {
+    color: var(--color-green);
+    transition-delay: 150ms;
+}
+
 
 #wrapper {
     text-align: center;
@@ -98,6 +103,7 @@ header div a {
 
 .card {
     background-color: var(--color-purple);
+    cursor: pointer;
 }
 
 .CardImgContainer img{
