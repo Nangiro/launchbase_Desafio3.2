@@ -1,0 +1,87 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Courses - Desafio 3.1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+{% endblock %}
+
+{% block content %}
+
+    <div id="wrapper">
+        <h1>My Favorite Posts</h1>
+    </div>
+
+    <section class="cards">
+        <div class="card" id="dark-mode-com-css-mudando-a-aparencia-do-blog-de-maneira-simples-e-rapida">
+            <div class="CardImgContainer">
+                <img src="https://blog.rocketseat.com.br/content/images/2020/10/dark-mode-com-css-mudando-a-aparencia-do-blog-de-maneira-simples-e-rapida.jpg" alt="Dark Mode com CSS">
+            </div>
+            
+            <div class="cardContainer">
+                <p>Dark Mode com CSS</p>
+            </div>
+
+            <div class="cardInfo">
+                <p>Tiago Marinho</p>
+                <p class="tempoLeitura">3:00 min</p>
+            </div>
+        </div>
+
+        <div class="card" id="introducao-a-testing-library-testando-componentes-react">
+            <div class="CardImgContainer">
+                <img src="https://blog.rocketseat.com.br/content/images/2020/08/introducao-a-testing-library-testando-componentes-react.png" alt="Introdução à Testing Library">
+            </div>
+            
+            <div class="cardContainer">
+                <p>Introdução à Testing Library</p>
+            </div>
+
+            <div class="cardInfo">
+                <p>Tiago Marinho</p>
+                <p class="tempoLeitura">9:00 min</p>
+            </div>
+        </div>
+
+        <div class="card" id="introducao-ao-docker-criando-um-servidor-web-com-node-js-e-subindo-para-o-container">
+            <div class="CardImgContainer">
+                <img src="https://blog.rocketseat.com.br/content/images/2020/08/introducao-ao-docker.png" alt="Introdução ao Docker">
+            </div>
+            
+            <div class="cardContainer">
+                <p>Introdução ao Docker</p>
+            </div>
+
+            <div class="cardInfo">
+                <p>Tiago Marinho</p>
+                <p class="tempoLeitura">9:00 min</p>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="ModalOverlay">
+        <div class="modal">
+            <a class="MaximizeModal">
+                <i class="material-icons">maximize</i>
+            </a>
+
+            <a class="CloseModal">
+                <i class="material-icons">close</i>
+            </a>
+
+            <div class="ModalContent">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+
+    <div id="linksFooter" class="links">
+        <a href="https://github.com/Rocketseat" target="_blank">Github</a>
+        <a href="https://www.facebook.com/rocketseat" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/rocketseat_oficial" target="_blank">Instragram</a>
+    </div>
+
+{% endblock %}}
