@@ -103,6 +103,7 @@ header div a:hover {
 
 .card {
     background-color: var(--color-purple);
+    display: grid;
     cursor: pointer;
 }
 
@@ -118,6 +119,7 @@ header div a:hover {
 .cardInfo {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 .tempoLeitura {

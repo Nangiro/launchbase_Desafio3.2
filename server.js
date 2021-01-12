@@ -13,7 +13,25 @@ nunjucks.configure("views",{
 })
 
 server.get("/", function(req, res){
-    return res.render("about")
+    const about = {
+        avatar_url: "https://cdn-images-1.medium.com/max/1200/1*TkXVfLTwsHdwpUEjGzdi9w.jpeg",
+        name: "Rocketseat",
+        description: "Mais do que uma plataforma de educação em tecnologia, somos uma comunidade incrível de programadores em busca do próximo nível. Uma startup criada para educar, inspirar e conectar programadores e empreendedores",
+        technologies: [
+            { name: "HTML" },
+            { name: "CSS" },
+            { name: "JavaScript" },
+            { name: "React" },
+            { name: "React Native" },
+        ],
+        links: [
+            { name: "Github", url: "https://github.com/Rocketseat" },
+            { name: "Facebook", url: "https://www.facebook.com/rocketseat" },
+            { name: "Instagram", url: "https://www.instagram.com/rocketseat_oficial" }
+        ]
+    }
+
+    return res.render("about", { about })
 })
 
 server.get("/courses", function(req, res){
